@@ -15,7 +15,9 @@ const elements = {
     "submit": ".ant-btn",
     "tryAgain": ".btn-primary",
     "errorMessage": ".ant-form-item-explain",
-    "title": "h4"
+    "title": "h4",
+    "body": "//div/p[1]",
+    "moral": "//div/p[2]"
 }
 
 module.exports = elements;
