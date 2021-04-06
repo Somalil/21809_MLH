@@ -14,7 +14,8 @@ const elements = {
     "image": "span.ant-upload",
     "submit": ".ant-btn",
     "tryAgain": ".btn-primary",
-    "errorMessage": ".ant-form-item-explain"
+    "errorMessage": ".ant-form-item-explain",
+    "title": "h4"
 }
 
 module.exports = elements;
