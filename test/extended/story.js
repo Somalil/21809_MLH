@@ -31,4 +31,16 @@ describe('Story elements', function () {
         $(sel.submit).click();
         expect($(sel.title)).toBeDisplayed();
     });
+
+    it('TC-143 History page contains Body', function () {
+        storyGenerate(name.default, sel.radioButtonHe, age.default, story.comedy);
+        $(sel.submit).click();
+        expect($(sel.body)).toBeDisplayed();
+    });
+
+    it('TC-144 History page contains Moral', function () {
+        storyGenerate(name.default, sel.radioButtonHe, age.default, story.comedy);
+        $(sel.submit).click();
+        expect($(sel.moral)).toBeDisplayed();
+    });
 });
