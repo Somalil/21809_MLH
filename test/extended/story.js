@@ -38,7 +38,7 @@ describe('Story elements', function () {
         expect($(sel.body)).toBeDisplayed();
     });
 
-    it('TC-144 History page contains Moral', function () {
+    it('TC-144 History page contains Moral.', function () {
         storyGenerate(name.default, sel.radioButtonHe, age.default, story.comedy);
         $(sel.submit).click();
         expect($(sel.moral)).toBeDisplayed();
