@@ -17,7 +17,10 @@ const elements = {
     "errorMessage": ".ant-form-item-explain",
     "ageFieldError": "//div[contains(@class,\"ant-form-item-with-help\")][.//label[@for=\"age\"]]//div[@role=\"alert\"]",
     "spinnerUp": "span.ant-input-number-handler-up",
-    "spinnerDown": "span.ant-input-number-handler-down"
+    "spinnerDown": "span.ant-input-number-handler-down",
+    "title": "h4",
+    "body": "//div/p[1]",
+    "moral": "//div/p[2]"
 }
 
 module.exports = elements;
