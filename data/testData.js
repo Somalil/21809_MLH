@@ -25,6 +25,8 @@ const story = {
 const imagePath = {
     "noImage": "https://qa-apps.netlify.app/static/error.86e8f937.png",
     "JPG3_9": "../data/imageFiles/JPG3_9.jpg",
+    "PNG3_9": "../data/imageFiles/PNG3_9.png",
+    "JPG1": "../data/imageFiles/JPG1.jpg"
 }
 
 module.exports = {name, gender, age, story, imagePath};
