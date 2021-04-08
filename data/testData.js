@@ -22,4 +22,9 @@ const story = {
     "comedy": 6
 }
 
-module.exports = {name, gender, age, story};
+const imagePath = {
+    "noImage": "https://qa-apps.netlify.app/static/error.86e8f937.png",
+    "JPG3_9": "../data/imageFiles/JPG3_9.jpg",
+}
+
+module.exports = {name, gender, age, story, imagePath};

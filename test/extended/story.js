@@ -1,6 +1,6 @@
 import sel from '../../data/selectors';
-import storyGenerate from '../../helpers/methods';
-import {name, age, story} from '../../data/testData';
+import {input4Values, imageUpload} from '../../helpers/methods';
+import {name, age, story, imagePath} from '../../data/testData';
 import exp from '../../data/expected.json';
 
 describe('Story elements', function () {
@@ -14,33 +14,51 @@ describe('Story elements', function () {
     });
 
     it('TC-140 History page contains Header', function () {
-        storyGenerate(name.default, sel.radioButtonHe, age.default, story.comedy);
+        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
         $(sel.submit).click();
         expect($(sel.header)).toBeDisplayed();
     });
 
     it('TC-141 header = \'My Little Hero\'', function () {
-        storyGenerate(name.default, sel.radioButtonHe, age.default, story.comedy);
+        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
         $(sel.submit).click();
         const headerText = $(sel.header).getText();
         expect(headerText).toEqual(exp.storyHeader);
     });
 
     it('TC-142 History page contains Title', function () {
-        storyGenerate(name.default, sel.radioButtonHe, age.default, story.comedy);
+        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
         $(sel.submit).click();
         expect($(sel.title)).toBeDisplayed();
     });
 
     it('TC-143 History page contains Body', function () {
-        storyGenerate(name.default, sel.radioButtonHe, age.default, story.comedy);
+        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
         $(sel.submit).click();
         expect($(sel.body)).toBeDisplayed();
     });
 
-    it('TC-144 History page contains Moral.', function () {
-        storyGenerate(name.default, sel.radioButtonHe, age.default, story.comedy);
+    it('TC-144 History page contains Moral', function () {
+        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
         $(sel.submit).click();
         expect($(sel.moral)).toBeDisplayed();
     });
+
+    it('TC-145 History page contains Image', function () {
+        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
+        imageUpload(imagePath.JPG3_9);
+        $(sel.submit).click()
+        const src = $('.error__pic[src]').getAttribute('src');
+        const isImage = src !== imagePath.noImage;
+        expect(isImage).toEqual(true);
+
+    });
+
+    it('TC-146 History page contains Reset button', function () {
+        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
+        $(sel.submit).click();
+        const btn = $(sel.resetButton).isDisplayed();
+        expect(btn).toEqual(true);
+    });
+
 });

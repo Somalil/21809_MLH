@@ -12,6 +12,8 @@ const elements = {
     "storyList": ".ant-select-item",
     "imageLabel": ".ant-form-item-label",
     "image": "span.ant-upload",
+    "imageInput": "[type=\"file\"]",
+    "imageThumbnail": ".ant-upload-list-item-thumbnail",
     "submit": ".ant-btn",
     "tryAgain": ".btn-primary",
     "errorMessage": ".ant-form-item-explain",
@@ -20,7 +22,8 @@ const elements = {
     "spinnerDown": "span.ant-input-number-handler-down",
     "title": "h4",
     "body": "//div/p[1]",
-    "moral": "//div/p[2]"
+    "moral": "//div/p[2]",
+    "resetButton": ".btn-primary"
 }
 
 module.exports = elements;
