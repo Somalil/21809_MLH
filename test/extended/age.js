@@ -102,7 +102,7 @@ describe('Age field', () => {
 
         it('TC-078 Click down on the spin, when Age field value is "1"', function(){
             const input = $(sel.age);
-            input.setValue('0');
+            input.setValue('1');
             $(sel.spinnerDown).click();
             browser.pause(1000);
             const err = $(sel.ageFieldError).isDisplayed();
