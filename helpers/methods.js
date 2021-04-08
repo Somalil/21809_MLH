@@ -8,4 +8,14 @@ function input4Values (name, genderButton, age, story){
     $$(sel.storyList)[story].click();
 }
 
-module.exports = input4Values;
+function imageUpload(imagePath){
+    const fileUpload = $(sel.imageInput);
+    browser.execute((el) => el.style.display = 'block', fileUpload);
+    fileUpload.waitForDisplayed();
+    const path = require('path');
+    const filePath = path.join(__dirname, imagePath);
+    const remoteFilePath = browser.uploadFile(filePath);
+    fileUpload.setValue(remoteFilePath);
+}
+
+module.exports = {input4Values, imageUpload}

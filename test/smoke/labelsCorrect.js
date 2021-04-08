@@ -17,8 +17,6 @@ describe('Labels are Correct', function () {
         expect(instruction).toEqual(exp.instruction);
     });
 
-    /* commented until bug fix QA8-456
-
     it('TC-017 Name Field label = "1. What is your Hero\'s name?"', function () {
         let label = $$(sel.requiredLabel)[0].getText();
         expect(label).toEqual(exp.nameLabel);
@@ -28,8 +26,6 @@ describe('Labels are Correct', function () {
        let label = $$(sel.requiredLabel)[1].getText();
        expect(label).toEqual(exp.genderLabel);
    });
-
-   */
 
    it('TC-019 The first button label = "he"', function () {
        let buttonHe = $$(sel.radioButtonsLabel)[0].getText();
@@ -46,14 +42,10 @@ describe('Labels are Correct', function () {
        expect(buttonIt).toEqual(exp.itLabel);
    });
 
-   /*
-
    it('TC-022 Age field label = "3. How old is your hero?"', function () {
        let label = $$(sel.requiredLabel)[2].getText();
        expect(label).toEqual(exp.ageLabel);
    });
-
-   */
 
     it('TC-023 Type of story label = "4. What type of story would you like to read?"', function () {
         let label = $$(sel.requiredLabel)[3].getText();
@@ -65,11 +57,9 @@ describe('Labels are Correct', function () {
         expect(label).toEqual(exp.imageLabel);
     });
 
-    /*
     it('TC-025 Submit button label = "Create!"', function () {
         let submit = $(sel.submit).getText();
         expect(submit).toEqual(exp.submitText);
     });
-    */
 
 });
