@@ -42,7 +42,6 @@ describe('Image field', function () {
         imageUpload(imagePath.JPG1)
         $(sel.imageIconActions).waitForExist()
         $(sel.imageIcon).moveTo()
-        browser.pause(9000)
         const isDisplaying = $(sel.imageRemoveButton).isDisplayed()
         expect(isDisplaying).toEqual(true);
     });
