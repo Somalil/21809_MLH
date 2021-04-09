@@ -28,13 +28,13 @@ describe('Image field', function () {
 
     it('TC-108 Validate that user can select jpeg file smaller then 4 mb from file explorer', function () {
         imageUpload(imagePath.JPG3_9)
-        const isDisplaying = $(sel.imageThumbnail).isDisplayed()
+        const isDisplaying = $(sel.imageThumbnail).isExisting()
         expect(isDisplaying).toEqual(true);
     });
 
     it('TC-109 Validate that user can select png smaller then 4 mb file from file explorer', function () {
         imageUpload(imagePath.PNG3_9)
-        const isDisplaying = $(sel.imageThumbnail).isDisplayed()
+        const isDisplaying = $(sel.imageThumbnail).isExisting()
         expect(isDisplaying).toEqual(true);
     });
 

@@ -24,8 +24,7 @@ describe('Age field', () => {
         it('TC-068 Age field accepts one digit', function () {
             const input = $(sel.age);
             input.setValue('1');
-            browser.pause(1000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).isExisting();
             expect(err).toEqual(false);
         });
 
@@ -96,7 +95,7 @@ describe('Age field', () => {
 
         it('TC-077 Click down on the spin, when Age field is empty', function(){
             $(sel.spinnerDown).click();
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
@@ -104,8 +103,7 @@ describe('Age field', () => {
             const input = $(sel.age);
             input.setValue('1');
             $(sel.spinnerDown).click();
-            browser.pause(1000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed({timeout: 2000});
             expect(err).toEqual(true);
         });
 
@@ -113,64 +111,56 @@ describe('Age field', () => {
             const input = $(sel.age);
             input.setValue('999999999999');
             $(sel.spinnerUp).click();
-            browser.pause(1000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
         it('TC-080 13 digits in Age field', function(){
             const input = $(sel.age);
             input.setValue('7777777777777');
-            browser.pause(1000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
         it('TC-081 Age field doesn\'t accepts letters', function(){
             const input = $(sel.age);
             input.setValue('abc');
-            browser.pause(1000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
         it('TC-082 Age field doesn\'t accepts Uppercase letters', function(){
             const input = $(sel.age);
             input.setValue('ABC');
-            browser.pause(1000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
         it('TC-083 Age field doesn\'t accepts special symbols', function(){
             const input = $(sel.age);
             input.setValue('@\\]^_`{|~');
-            browser.pause(1000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
         it('TC-084 Age field doesn\'t accepts bad symbols', function(){
             const input = $(sel.age);
             input.setValue('♣ ☺ ♂');
-            browser.pause(2000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
         it('TC-085 Age field doesn\'t accepts line feed symbols', function(){
             const input = $(sel.age);
             input.setValue('^M" /  "\n" /  "\r"');
-            browser.pause(2000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
         it('TC-086 Age field doesn\'t accepts russian letters', function(){
             const input = $(sel.age);
             input.setValue('фбвгд');
-            browser.pause(2000);
-            const err = $(sel.ageFieldError).isDisplayed();
+            const err = $(sel.ageFieldError).waitForDisplayed();
             expect(err).toEqual(true);
         });
 
