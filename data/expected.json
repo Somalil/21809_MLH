@@ -11,6 +11,7 @@
   "agePlaceholder": "Hero's age",
   "storyLabel": "4. What type of story would you like to read?",
   "imageLabel": "5. Upload an image (optional)",
+  "imagePlaceholderText": "Click or drag and drop",
   "submitText": "Create!",
   "namePlaceholder": "Hero's name",
   "storyHeader": "My Little Hero"
