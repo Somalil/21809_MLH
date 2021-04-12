@@ -8,6 +8,7 @@ const elements = {
     "radioButtonIt": "[type=\"radio\"][value=\"it\"]",
     "radioButtonsLabel": ".ant-radio-wrapper",
     "age": "#age",
+    "storyTypePlaceholder": ".ant-select-selection-placeholder",
     "storyType": ".ant-select-selector",
     "storyList": ".ant-select-item",
     "imageLabel": ".ant-form-item-label",
@@ -28,7 +29,9 @@ const elements = {
     "title": "h4",
     "body": "//div/p[1]",
     "moral": "//div/p[2]",
-    "resetButton": ".btn-primary"
+    "resetButton": ".btn-primary",
+    "textExample": "//*[@id=\"root\"]//div//p",
+    "nameFieldError": ".ant-form-item-explain-error",
 }
 
 module.exports = elements;
