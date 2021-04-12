@@ -26,7 +26,15 @@ const imagePath = {
     "noImage": "https://qa-apps.netlify.app/static/error.86e8f937.png",
     "JPG3_9": "../data/imageFiles/JPG3_9.jpg",
     "PNG3_9": "../data/imageFiles/PNG3_9.png",
-    "JPG1": "../data/imageFiles/JPG1.jpg"
+    "JPG1": "../data/imageFiles/JPG1.jpg",
+    "JPG4_1": "../data/imageFiles/JPG4_1.jpg",
+    "PNG4_1": "../data/imageFiles/PNG4_1.png",
+    "GIF": "../data/imageFiles/GIF.gif",
+    "BMP": "../data/imageFiles/BMP.bmp",
+    "PDF": "../data/imageFiles/PDF.pdf",
+    "TXT": "../data/imageFiles/TXT.txt",
+    "MP4": "../data/imageFiles/MP4.mp4",
+    "PPT": "../data/imageFiles/PPT.ppt"
 }
 
 module.exports = {name, gender, age, story, imagePath};
