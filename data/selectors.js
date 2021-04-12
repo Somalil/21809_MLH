@@ -18,6 +18,7 @@ const elements = {
     "imageIcon": ".ant-upload-list-item-info",
     "imageIconActions": ".ant-upload-list-item-actions",
     "imageRemoveButton": ".ant-btn-icon-only",
+    "imageError": ".anticon-close-circle",
     "submit": ".ant-btn",
     "tryAgain": ".btn-primary",
     "errorMessage": ".ant-form-item-explain",
