@@ -3,7 +3,7 @@ import {input4Values} from '../../helpers/methods';
 import {name, age, story} from '../../data/testData';
 import exp from '../../data/expected.json';
 
-describe('Name field', function () {
+describe('Reset field', function () {
     before('Open App', function () {
         browser.url('');
     });

@@ -141,7 +141,7 @@ describe('Name field', function () {
             expect(err).toEqual(true);
         });
         it('TC-050 Submit button disabled when Name field is empty', function(){
-            $$(sel.radioButtons)[0].click();
+            $$(sel.radioButtonHe).click();
             $(sel.age).setValue('123456');
             $(sel.storyType).click();
             $$(sel.storyList)[6].click();
