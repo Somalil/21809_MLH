@@ -11,6 +11,8 @@ const elements = {
     "storyTypePlaceholder": ".ant-select-selection-placeholder",
     "storyType": ".ant-select-selector",
     "storyList": ".ant-select-item",
+    "storyListHolder": "div.rc-virtual-list-holder-inner", // ????
+    "storyChevron": ".ant-select-arrow",
     "imageLabel": ".ant-form-item-label",
     "image": "span.ant-upload",
     "imagePlaceholder": ".ant-upload > div >div",

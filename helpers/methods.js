@@ -18,4 +18,25 @@ function imageUpload(imagePath){
     fileUpload.setValue(remoteFilePath);
 }
 
-module.exports = {input4Values, imageUpload}
+function isPronounsCorrect(pronoun){
+    const body = $(sel.body).getText();
+    return body.includes(`shakes ${pronoun} head`);
+}
+
+function isFirstGenderUppercase(gender){
+    const body = $(sel.body).getText();
+    let index = body.indexOf('are unequal. ');
+    let bodyGender = body.substr(index + 13, 2);
+    let expectedGender = gender[0].toUpperCase() + gender.slice(1);
+    return bodyGender === expectedGender;
+}
+
+function isSecondGenderUppercase(gender){
+    const body = $(sel.body).getText();
+    let index = body.indexOf('continues doing');
+    let bodyGender = body.substr(index - 3, 2);
+    let expectedGender = gender[0].toUpperCase() + gender.slice(1);
+    return bodyGender === expectedGender;
+}
+
+module.exports = {input4Values, imageUpload, isPronounsCorrect, isFirstGenderUppercase, isSecondGenderUppercase}

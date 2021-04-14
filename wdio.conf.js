@@ -18,7 +18,7 @@ exports.config = {
     //
     specs: [
         './test/smoke/*.js',
-        './test/extended/image.js'
+        './test/extended/storyType.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -68,7 +68,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'silent',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -172,6 +172,7 @@ exports.config = {
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
      * @param {Object} config wdio configuration object
+     * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
