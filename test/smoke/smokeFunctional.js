@@ -1,6 +1,6 @@
 import sel from '../../data/selectors';
 import {name, gender, age, story} from '../../data/testData';
-import input4Values from '../../helpers/methods';
+import {input4Values} from '../../helpers/methods';
 
 describe('Required fields and story created', function () {
 
@@ -10,7 +10,7 @@ describe('Required fields and story created', function () {
 
     it('TC-026 Submit button is enabled after fields 1-4 are filled in with valid values', function () {
         $(sel.name).setValue(name.default);
-        $$(sel.radioButtons)[gender.she].click();
+        $(sel.radioButtonHe).click();
         $(sel.age).setValue(age.default);
         $(sel.storyType).click();
         $$(sel.storyList)[story.comedy].click();

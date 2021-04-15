@@ -47,7 +47,7 @@ describe('Age field', () => {
         it('TC-071 Age field accepts 0 before the number', function(){
             const input = $(sel.age);
             input.setValue('0' + Math.trunc(Math.random() * (98) + 1));
-            browser.pause(2000);
+            browser.pause(1000);
             const err = $(sel.ageFieldError).isDisplayed();
             expect(err).toEqual(false);
         });
@@ -55,7 +55,7 @@ describe('Age field', () => {
         it('TC-072 Age field accepts space before the number', function(){
             const input = $(sel.age);
             input.setValue(' ' + Math.trunc(Math.random() * (98) + 1));
-            browser.pause(2000);
+            browser.pause(1000);
             const err = $(sel.ageFieldError).isDisplayed();
             expect(err).toEqual(false);
         });
@@ -103,7 +103,7 @@ describe('Age field', () => {
             const input = $(sel.age);
             input.setValue('1');
             $(sel.spinnerDown).click();
-            const err = $(sel.ageFieldError).waitForDisplayed({timeout: 2000});
+            const err = $(sel.ageFieldError).waitForDisplayed({timeout: 1000});
             expect(err).toEqual(true);
         });
 
@@ -169,7 +169,7 @@ describe('Age field', () => {
             const input = $(sel.age);
             input.setValue('1');
             $(sel.age).keys('Backspace');
-            const err = $(sel.ageFieldError).waitForDisplayed({timeout: 3000});
+            const err = $(sel.ageFieldError).waitForDisplayed({timeout: 1000});
             expect(err).toEqual(true);
         });
 

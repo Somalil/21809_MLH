@@ -41,7 +41,7 @@ describe('Reset field', function () {
         input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
         $(sel.submit).click();
         $(sel.resetButton).click();
-        expect($(sel.name)).toHaveElementProperty('placeholder', exp.namePlaceholder);
+        expect($(sel.name).getValue()).toEqual('');
     });
     it('TC-152a Gender(He) radioButtons are not selected after clicking Reset button', function(){
         input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);

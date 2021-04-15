@@ -32,13 +32,13 @@ describe('Reading story', function () {
     });
 
     it('TC-158 Correct $pronounsName in body for \'she\'', function (){
-        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
+        input4Values(name.default, sel.radioButtonShe, age.default, story.comedy);
         $(sel.submit).click();
         expect(isPronounsCorrect(pronoun.she)).toEqual(true);
     });
 
     it('TC-159 Correct $pronounsName in body for \'it\'', function (){
-        input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
+        input4Values(name.default, sel.radioButtonIt, age.default, story.comedy);
         $(sel.submit).click();
         expect(isPronounsCorrect(pronoun.it)).toEqual(true);
     });

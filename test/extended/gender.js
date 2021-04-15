@@ -1,4 +1,5 @@
 import sel from '../../data/selectors';
+import {age, name, story} from "../../data/testData";
 
 describe('Gender field', function () {
 
@@ -104,6 +105,15 @@ describe('Gender field', function () {
         const isShe = $(sel.radioButtonShe).isSelected();
         const isIt = $(sel.radioButtonIt).isSelected();
         expect(!isHe && isShe && !isIt).toEqual(true);
+    });
+
+    it('TC-066 Not chosen button', function () {
+        $(sel.name).setValue(name.default);
+        $(sel.age).setValue(age.default);
+        $(sel.storyType).click();
+        $$(sel.storyList)[story.comedy].click();
+        const isSubmitButtonEnabled = $(sel.submit).isEnabled()
+        expect(isSubmitButtonEnabled).toEqual(false);
     });
 
 });
