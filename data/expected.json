@@ -15,5 +15,12 @@
   "agePlaceholder": "Hero's age",
   "reset": "Try again!",
   "storyPlaceholder": "Type of the story",
-  "imagePlaceholderText": "Click or drag and drop"
+  "imagePlaceholderText": "Click or drag and drop",
+  "first": "Overcoming the Monster",
+  "second": "Rebirth",
+  "third": "Quest",
+  "fourth": "Journey and Return",
+  "fifth": "Rags and Riches",
+  "sixth": "Tragedy",
+  "seventh": "Comedy"
 }

@@ -23,7 +23,7 @@ describe('Story elements', function () {
         input4Values(name.default, sel.radioButtonHe, age.default, story.comedy);
         $(sel.submit).click();
         const headerText = $(sel.header).getText();
-        expect(headerText).toEqual(exp.storyHeader);
+        expect(headerText).toEqual(exp.header);
     });
 
     it('TC-142 History page contains Title', function () {

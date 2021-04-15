@@ -7,6 +7,11 @@ const gender = {
     "she": 1,
     "it": 2
 }
+const pronoun = {
+    "he": 'his',
+    "she": 'her',
+    "it": 'its'
+}
 
 const age = {
     "default": "1234567890"
@@ -37,4 +42,4 @@ const imagePath = {
     "PPT": "../data/imageFiles/PPT.ppt"
 }
 
-module.exports = {name, gender, age, story, imagePath};
+module.exports = {name, gender, age, story, imagePath, pronoun};

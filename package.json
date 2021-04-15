@@ -22,6 +22,8 @@
     "@wdio/mocha-framework": "^7.2.0",
     "@wdio/selenium-standalone-service": "^7.2.0",
     "@wdio/spec-reporter": "^7.2.0",
-    "@wdio/sync": "^7.2.0"
+    "@wdio/sync": "^7.2.0",
+    "chromedriver": "^89.0.0",
+    "wdio-chromedriver-service": "^7.0.0"
   }
 }
